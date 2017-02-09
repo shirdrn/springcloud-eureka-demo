@@ -1,0 +1,12 @@
+server:
+  port: 3300
+spring:
+  application:
+    name: my-eureka-server
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:3300/eureka/
+  instance:
+    metadataMap:
+      instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
