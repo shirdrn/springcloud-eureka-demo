@@ -8,8 +8,8 @@
   <artifactId>springcloud-application-services</artifactId>
   <packaging>pom</packaging>
   <modules>
-  	<module>springcloud-application-greeingservice-01</module>
-  	<module>springcloud-application-greeingservice-02</module>
+  	<module>springcloud-application-greetingservice-01</module>
+  	<module>springcloud-application-greetingservice-02</module>
   </modules>
   
   <dependencies>
