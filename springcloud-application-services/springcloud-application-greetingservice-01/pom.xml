@@ -5,5 +5,5 @@
     <artifactId>springcloud-application-services</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>springcloud-application-greeingservice-01</artifactId>
+  <artifactId>springcloud-application-greetingservice-01</artifactId>
 </project>
