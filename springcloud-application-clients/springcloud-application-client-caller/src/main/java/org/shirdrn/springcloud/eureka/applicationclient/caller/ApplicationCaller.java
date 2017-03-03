@@ -12,10 +12,10 @@ import org.springframework.web.client.RestTemplate;
 @SpringBootApplication
 @EnableEurekaClient
 @EnableFeignClients
-public class Application {
+public class ApplicationCaller {
 
     public static void main(String[] args) {
-        new SpringApplicationBuilder(Application.class)
+        new SpringApplicationBuilder(ApplicationCaller.class)
                 .web(false)
                 .run(args);
     }
@@ -30,12 +30,16 @@ class RestTemplateExample implements CommandLineRunner {
 
     @Override
     public void run(String... strings) throws Exception {
-        String greetingSentence = this.restTemplate.getForObject(
-        		GREETING_SERVICE_URI, 
-        		String.class, 
-        		"Dean Shi");
-
-       System.out.println("Response result: " + greetingSentence);
+    	while(true) {
+    		String greetingSentence = this.restTemplate.getForObject(
+    				GREETING_SERVICE_URI, 
+    				String.class, 
+    				"Dean Shi");
+    		
+    		System.out.println("Response result: " + greetingSentence);
+    		
+    		Thread.sleep(5000);
+    	}
     }
 
 }
